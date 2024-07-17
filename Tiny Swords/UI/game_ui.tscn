@@ -1,0 +1,91 @@
+[gd_scene load_steps=8 format=3 uid="uid://yfsted5nao2p"]
+
+[ext_resource type="Texture2D" uid="uid://ccrx62ljiswdg" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="1_816kn"]
+[ext_resource type="Script" path="res://UI/Script/game_ui.gd" id="1_mk444"]
+[ext_resource type="FontFile" uid="uid://lin1xkhdt64p" path="res://assets/Fonts/04B_03__.TTF" id="2_gaa5c"]
+[ext_resource type="Texture2D" uid="uid://pajw3fu0n5f" path="res://addons/Tiny Swords/Resources/Resources/G_Idle_(NoShadow).png" id="4_n4hwe"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_82gka"]
+texture = ExtResource("1_816kn")
+texture_margin_left = 32.0
+texture_margin_top = 16.0
+texture_margin_right = 32.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(32, 48, 128, 128)
+
+[sub_resource type="LabelSettings" id="LabelSettings_bvj7s"]
+font = ExtResource("2_gaa5c")
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bl31y"]
+atlas = ExtResource("4_n4hwe")
+region = Rect2(48, 48, 48, 48)
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_mk444")
+
+[node name="TimerLabel" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -45.0
+offset_top = 38.0
+offset_right = 45.0
+offset_bottom = 61.0
+grow_horizontal = 2
+text = "
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -245.0
+offset_top = 18.0
+offset_right = -7.0
+offset_bottom = 99.0
+grow_horizontal = 0
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_82gka")
+
+[node name="GoldLabel" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.29
+anchor_right = 0.5
+anchor_bottom = 0.29
+offset_left = -54.0
+offset_top = -11.49
+offset_right = 30.0
+offset_bottom = 12.51
+grow_horizontal = 2
+grow_vertical = 2
+text = "20,000
+"
+label_settings = SubResource("LabelSettings_bvj7s")
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 39.0
+offset_top = -34.5
+offset_right = 87.0
+offset_bottom = 13.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.584526, 0.584526)
+texture = SubResource("AtlasTexture_bl31y")

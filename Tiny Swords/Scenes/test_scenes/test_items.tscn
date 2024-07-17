@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c4fjmxtwdkmvo"]
+
+[ext_resource type="PackedScene" uid="uid://bal36l5jflj1e" path="res://Player/player.tscn" id="1_6p5i2"]
+[ext_resource type="PackedScene" uid="uid://dv3lk23njreoh" path="res://Misc/meat.tscn" id="2_k4nmy"]
+[ext_resource type="PackedScene" uid="uid://m7gfj15025df" path="res://Misc/ritual.tscn" id="2_v2er2"]
+
+[node name="TestItems" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_6p5i2")]
+position = Vector2(117, 133)
+
+[node name="Ritual" parent="Player" instance=ExtResource("2_v2er2")]
+show_behind_parent = true
+position = Vector2(2, -25)
+
+[node name="Meat" parent="." instance=ExtResource("2_k4nmy")]
+position = Vector2(722, 281)

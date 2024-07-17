@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://f1qffkbo18i1"]
+
+[ext_resource type="PackedScene" uid="uid://bal36l5jflj1e" path="res://Player/player.tscn" id="1_lf432"]
+[ext_resource type="PackedScene" uid="uid://yfsted5nao2p" path="res://UI/game_ui.tscn" id="2_b8ng6"]
+[ext_resource type="PackedScene" uid="uid://c1cnadd6jc5as" path="res://Misc/gold.tscn" id="4_v5uke"]
+
+[node name="TestUi" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_lf432")]
+position = Vector2(585, 324)
+sword_damage = 5
+ritual_damage = 4
+health = 100
+
+[node name="GameUI" parent="." instance=ExtResource("2_b8ng6")]
+
+[node name="Gold" parent="." instance=ExtResource("4_v5uke")]
+position = Vector2(771, 135)
+
+[node name="Gold2" parent="." instance=ExtResource("4_v5uke")]
+position = Vector2(658, 121)
+
+[node name="Gold3" parent="." instance=ExtResource("4_v5uke")]
+position = Vector2(550, 114)
+
+[node name="Gold4" parent="." instance=ExtResource("4_v5uke")]
+position = Vector2(433, 110)
+
+[node name="Gold5" parent="." instance=ExtResource("4_v5uke")]
+position = Vector2(314, 114)
+
+[node name="Gold6" parent="." instance=ExtResource("4_v5uke")]
+position = Vector2(171, 114)
